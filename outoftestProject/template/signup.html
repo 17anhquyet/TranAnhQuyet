@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+    <br/><br/>
+    <h1>Sign up!</h1>
+    <form  method="POST">
+        {% csrf_token %}
+        <br/>
+        <div class="mb-3">
+        <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value= "{{name}}" name="name"placeholder="Name">
+        </div>
+        <div class="mb-3">
+        <input type="text" class="form-control" id="exampleInputPassword1" value= "{{age}}" name="age" placeholder="Age">
+        </div>
+        <div class="mb-3">
+        <input type="email" class="form-control" id="exampleInputPassword1" value= "{{email}}" name="email" placeholder="Email">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>   
+{% endblock %}
